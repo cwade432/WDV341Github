@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto&display=swap');
+
+        input[type=text] {
+            width: 100%;
+            padding: .5%;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        .button {
+            background-color: white;
+            border: none;
+            color: black;
+            border: 2px solid gainsboro;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #user_file {
+            background-color: white;
+            border: none;
+            color: black;
+            border: 2px solid gainsboro;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif; 
+        }
+
+        .button:hover {
+            background-color: gainsboro;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container" style="padding: 5%;">
+    <div class="flex-outer" style="background-color: aliceblue; padding: 5%; box-shadow: 5px 10px 8px 10px gainsboro; margin-bottom: 5%;"> 
+        <div class="jumbotron" style="background-color: transparent; font-family: 'Oswald', sans-serif;">
+            <h1 class="display-1" style="text-align: center; padding: 5%;">Contact Us</h1>
+            <p class="lead">Phone: 123-456-7890</p>
+            <p class="lead">Email: mail@ipatchez.com</p>
+            <p class="lead">Location: 123 php lane </p>
+            <hr class="my-2">
+        </div> 
+            <form id="contact_form" method="post" action="formHandler.php">
+            <div class="flex-outer">
+                <p>
+                    <p>
+                        <input type="text" name="contact_name" id="contact_name" placeholder="Enter Name"/>
+                    </p>
+                </p>
+                <p>
+                    <p>
+                        <input type="text" name="contact_email" id="contact_email" placeholder="Enter Email"/>
+                    </p>
+                </p>
+                <p>
+                    <select name="contact_reason" id="contact_reason">
+                    <option value="default">Select Option for Contact</option>
+                    <option value="Additional Information">More Information</option>
+                    <option value="Customer Support">Contact Customer Support</option>
+                    <option value="Get Support">Get Support</option>
+                    </select>
+                </p>
+
+                <p> 
+                    <input type="file" name="user_file" id="user_file">
+                </p>
+
+                <p>
+                    <p>
+                        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+                    </p>
+                </p>
+                
+                <p>
+                    <input type="submit" class="button" name="button" id="button" value="Submit" />
+                    <input type="reset" class="button" name="button2" id="button" value="Reset" />
+                </p>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
