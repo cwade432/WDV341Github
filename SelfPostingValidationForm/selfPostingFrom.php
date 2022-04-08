@@ -63,6 +63,10 @@ else{
             font-style: italic;
         }
 
+        #test_name {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -73,9 +77,10 @@ else{
     <?php
         if($validForm){
             echo "<h3>Thank you! Your event has been submitted.</h3>";
-            echo "<p>" . $eventName . "</p>";
-            echo "<p>" . $eventDesc . "</p>";
-            echo "<p>" . $eventPresenter . "</p>";
+            echo "<h4>Information submitted </h4>";
+            echo "<p>Event name: " . $eventName . "</p>";
+            echo "<p>Event description: " . $eventDesc . "</p>";
+            echo "<p>Event presenter: " . $eventPresenter . "</p>";
         }
         else{
     ?>
@@ -83,6 +88,7 @@ else{
         <p>
             <label for="event_name">Event Name: </label>
             <input type="text" name="event_name" id="event_name" placeholder="Name" value="<?php echo $eventName; ?>">
+            <input type="text" name="test_name" id="test_name">
             <span class="errorMsg"><?php echo $eventNameErrorMsg; ?></span>
         </p>
         <p>
