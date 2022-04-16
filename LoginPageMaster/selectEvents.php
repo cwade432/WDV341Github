@@ -19,6 +19,10 @@
     $stmt->setFetchMode(PDO::FETCH_ASSOC); // turn from database fromat to readable associative array (name, value)
 
     // ************ This page shows what can be deleted *************************
+
+    if(!empty($_POST['honeypot'])) {
+        echo "<h1>Bot Detected: NO NO NO";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -48,15 +52,18 @@
     <h1>WDV 341 Intro to PHP</h1>
     <h2>Testing pulling information from a database</h2>
     <h3>Current Events!</h3>
+    <form>
+    <p>
+        <input type="hidden" name="honeypot" style="display:none">
+    </p>
+    </form>
     <?php
-
     echo "<table style='width:100%'>";
     echo "<tr>";
     echo"<th>Event</th>
          <th>Event Description</th>
          <th>Event Presenter</th>";
     echo "</tr>";
-
     while($row=$stmt->fetch()) {
         echo "<tr>";
         echo "<td>" . $row['event_id'] . "</td>";
@@ -65,9 +72,7 @@
         echo "<td>" . $row['event_presenter'] . "<a href='deleteEvent.php?eventId=" . $row['event_id'] . "'>" . "<button> Delete </button>" . "<a href='editEvent.php?eventId=" . $row['event_id'] . "'>" . "<button> Edit </button>". "</td>";
         echo "</tr>";
     }
-
-    echo "<a href='login.php'>Admin Functions</a>"
-    
+    echo "<a href='login.php'>Admin Functions</a>"   
     ?>
-</body>
+    </body>
 </html>
