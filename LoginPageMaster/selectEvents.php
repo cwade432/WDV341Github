@@ -7,8 +7,8 @@
     //5. execute your statement
     // process results
     
-    //include 'connectPDO.php'; // brings in external file (step 1) // need to change based off local host or hosting account
-    include 'connectPDOIPATCHEZ.php'; // brings in external file (step 1) // need to change based off local host or hosting account
+    include 'connectPDO.php'; // brings in external file (step 1) // need to change based off local host or hosting account
+    //include 'connectPDOIPATCHEZ.php'; // brings in external file (step 1) // need to change based off local host or hosting account
 
     $sql = "SELECT event_id, event_name, event_description, event_presenter FROM wdv341_events"; // (step 2)
 
