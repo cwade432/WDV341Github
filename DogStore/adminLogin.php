@@ -173,8 +173,12 @@ else{
         </br>
         <h3>Admin Operations</h3>
         <ul>
-            <li><a href="selectProducts.php">View Products</li></a>
-            <!-- <li><a href="adminInsert.php">Admin Insert</li></a> -->
+            <li>
+                <a href="selectProducts.php">View Products</a>
+            </li>
+            <li>    
+                <a href="adminInsertUser.php">Add new Admin</a>
+            </li>
         </ul>
             <p><a href="adminLogout.php">Logout of Admin Panel</a></p>
     </div>
